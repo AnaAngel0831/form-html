@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    function onProfileSubmitted(){
+      return confirm("Do you really want to submit?(with submit button)");
+
+    }
+      function submitWithScrispt(){
+        var confirmResponse = confirm("do you wnna submit");
+        if(confirmResponse){
+          document.getElementById("profileForm").submit();
+        }
+      }
+    </script>
+    <title></title>
+  </head>
+  <body>
+    <h1>Profile info</h1>
+    <form  action="form.html" method="post" id="profileForm" enctype="multipart/form-data" onsubmit="return onProfileSubmitted()">
+      <fieldset>
+        <legend>Contact info</legend>
+
+    <label for="firstName"> First name:</label> <input tabindex="1" type="text" id= "firstName" name="firstName" ></input><br>
+      Last name: <input tabindex="2" type="text" id= "lastName" name="lastName"></input><br>
+      Email:     <input tabindex="3" type="email" id= "emailAdress" name="emailAdress"></input><br>
+      Password:  <input tabindex="4" type="password" id= "pwd" name="userPassword"></input><br>
+      <input type="hidden"  value="hidden" name="MyhiddenText"></input>
+          </fieldset>
+            Bio:<br>
+            <textarea name="bio" id="bio" rows="5" cols="30"></textarea><br>
+<fieldset>
+
+
+            Occupation:<br>
+            <select id="occupation" name="occupation" size="3" multiple>
+              <optgroup label="Tehnical">
+              <option value="dev" label="Developer"></option>
+              <option value="designer" label="Web Designer"></option>
+              </optgroup>
+              <optgroup label="Non-Technical">
+              <option value="cs" label="Consultant" selected></option>
+              <option value="man" label="Manager"></option>
+                </optgroup>
+              <option value="other" label="Other"></option>
+
+            </select>
+
+        </fieldset>
+            <br>
+            Gender:
+            <label><input tabindex="5" type="radio" name="gender" id="female" value="female">Female</input></label>
+            <input type="radio" name="gender" id="male" value="male">Male</input>
+            <br>
+
+            Preferences:<br>
+            <input tabindex="6" type="checkbox" name="preference" value="newsletter" id="Pref1">Send me a letter</input><br>
+            <input type="checkbox" name="preference" value="partners" id="Pref2">Send me a partner</input><br>
+            <input type="checkbox" name="preference" value="marketing" id="Pref3">Send me marketing</input><br>
+
+              <input tabindex="7" type="ProfileSubmit" value="Submit"></input><br>
+                <input type="submit" name="Submit" value="true"</input>
+                <input type="reset" value="Start over"></input>
+                <input type="image" width=50 height=50 src="disc.png" alt="apasa pe disc" value="true"></input>
+               <input type="button" name="buton" value="Push the button" onclick="submitWithScrispt()"></input>
+               <button type="submit" name="button" value="true">
+                <span style=" text-decoration:none; color:green">Button de submit</span></button>
+                 </form>
+  </body>
+</html>
